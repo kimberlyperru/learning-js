@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects | array</title>
+</head>
+<body>
+    <h2>These are Objects and Arrays</h2>
+    <a href="index.html">Home</a>
+    <a href="function.html">Functions</a>
+
+    <script>
+        // object example one
+      class Shoe {
+      constructor(brand, size, color, type) {
+      this.brand = brand;
+      this.size = size;
+      this.color = color;
+      this.type = type;
+     }
+
+      wear() {
+      console.log(`loving the ${this.brand} shoes.`);
+     }
+     }
+
+      const myShoe = new Shoe("Nike", 6, "black", "sneaker");
+     myShoe.wear();
+
+//   Object example 2
+       class Fruits {
+       constructor(name, color, taste) {
+       this.name = name;
+       this.color = color;
+       this.taste = taste;
+     }
+
+     describe() {
+     console.log(`The ${this.name} is ${this.color} and tastes ${this.taste}.`);
+     }
+     }
+
+      const myFruit = new Fruits("Apple", "red", "sweet");
+      myFruit.describe();
+
+// Object example 3
+     class Cars {
+     constructor(brand, model, year) {
+     this.brand = brand;
+     this.model = model;
+     this.year = year;
+     }
+
+     describe() {
+     console.log(`The ${this.year} ${this.brand} ${this.model} is a great car.`);
+     }
+     }
+
+     const myCar = new Cars("Toyota", "Corolla", 2020);
+     myCar.describe();
+
+// Array example 1
+const shoes = [
+  { brand: "Nike", size: 9, color: "black" },
+  { brand: "Adidas", size: 10, color: "white" },
+  { brand: "Puma", size: 8, color: "red" }
+  ];
+ 
+  shoes.forEach(shoe => {
+  console.log(shoe.brand);
+  });
+
+// Array example 2
+  const fruits = [
+ { name: "Apple", color: "red", taste: "sweet" },
+ { name: "Banana", color: "yellow", taste: "sweet" },
+ { name: "Lemon", color: "yellow", taste: "sour" }
+ ];
+
+ fruits.forEach(fruit => {
+  console.log(fruit.name);
+  });
+
+// Array example 3
+  const cars = [
+ { brand: "Toyota", model: "Corolla", year: 2020 },
+ { brand: "Honda", model: "Accord", year: 2019 },
+ { brand: "Ford", model: "Mustang", year: 2021 }
+ ];
+
+ cars.forEach(car => {
+    console.log(car.brand);
+ });
+    </script>
+ </body>
+</html>
+
+
