@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operations</title>
+</head>
+<body>
+    <h1>Operations</h1>
+    <P>== (Equal to) they are the same value even though they look different. ie 5 == "5" true </P>
+    <P>!= (Not equal to) they are not the same value. ie 5 != "5" false </P>
+    <P>=== (Strict equal to) they are the same value and type. ie 5 === 5 true </P>
+    <P>!== (Strict not equal to) they are not the same value or type. ie 5 !== "5" true </P>
+    <P> > (Greater than) they are not the same value. ie 5 > 4 true </P>
+    <P> < (Less than) they are not the same value. ie 5 < 6 true </P>
+    <P> >= (Greater than or equal to) they are not the same value. ie 5 >= 5 true </P>
+    <P> <= (Less than or equal to) they are not the same value. ie 5 <= 6 true </P>
+
+
+    <script>
+// Equal / Not Equal
+console.log("Samsung" == "Samsung");   // true (same word)
+console.log("Samsung" == "samsung");   // false (different spelling, JS is case-sensitive)
+
+
+console.log("Apple" === "Apple");      // true (exact same word and type)
+console.log("Apple" === "apple");      // false (capitalization matters)
+
+console.log("Sony" != "LG");           // true (different brands)
+console.log("Sony" != "Sony");         // false (they’re the same)
+
+console.log("Nokia" !== "nokia");      // true (different spelling)
+console.log("Nokia" !== "Nokia");      // false (exactly the same)
+
+// Greater / Less Than: works in ABC order
+console.log("Apple" > "Samsung");      // false (Apple comes before Samsung in Alphabetical order)
+console.log("LG" < "Nokia");           // true (L comes before N)
+console.log("Samsung" >= "Samsung");   // true (same word)
+console.log("Apple" <= "Samsung");     // true (A comes before S)
+
+
+
+    </script>
+</body>
+</html>

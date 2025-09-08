@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_Properties</title>
+
+    <style>
+    .dom { padding: 10px; margin: 5px; border: 1px solid rgb(95, 171, 212); }
+    </style>
+</head>
+<body>
+
+    <h2 id="heading" class="dom">DOM <span style="color:rgb(36, 36, 227);">Properties</span></h2>
+  <p id="output" class="dom">Click the buttons to see the results below.</p>
+
+  <button onclick="showInnerHTML()">1. innerHTML</button>
+  <button onclick="showTextContent()">2. textContent</button>
+  <button onclick="showInnerText()">3. innerText</button>
+  <button onclick="showOuterHTML()">4. outerHTML</button>
+
+  <script>
+       // innerHTML
+      function showInnerHTML() {
+      let heading = document.getElementById("heading");
+      document.getElementById("output").innerHTML = "innerHTML: " + heading.innerHTML;
+     }
+
+       // textContent
+      function showTextContent() {
+      let heading = document.getElementById("heading");
+      document.getElementById("output").textContent = "textContent: " + heading.textContent;
+     }
+
+      // innerText
+     function showInnerText() {
+      let heading = document.getElementById("heading");
+      document.getElementById("output").innerText = "innerText: " + heading.innerText;
+     }
+
+      // outerHTML
+     function showOuterHTML() {
+      let heading = document.getElementById("heading");
+      document.getElementById("output").innerText = "outerHTML: " + heading.outerHTML;
+     }
+  </script>
+</body>
+</html>

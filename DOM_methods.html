@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Methods</title>
+      <style>
+    .fruit { margin: 5px; }
+    .box { padding: 10px; margin: 5px; border: 1px solid black; }
+  </style>
+</head>
+<body>
+    <h1 id="title">DOM Methods.</h1>
+    <button onclick="changeText()">1. getElementById()</button>
+    <hr>
+
+    <p class="fruit">Apple</p>
+    <p class="fruit">Banana</p>
+    <p class="fruit">Mango</p>
+    <button onclick="highlight()">2. getElementsByClassName()</button>
+    <hr>
+
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+    <button onclick="changeColor()">3. getElementsByTagName()</button>
+    <hr>
+
+    <h2 class="heading">First Heading</h2>
+    <h2 class="heading">Second Heading</h2>
+    <button onclick="updateHeading()">4. querySelector()</button>
+    <hr>
+
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <button onclick="colorBoxes()">5. querySelectorAll()</button>
+
+  <script>
+     // getElementById()
+     function changeText() {
+      document.getElementById("title").innerHTML = "Changed using getElementById!";
+     }
+
+      // getElementsByClassName()
+     function highlight() {
+     let fruits = document.getElementsByClassName("fruit");
+     for (let i = 0; i < fruits.length; i++) {
+     fruits[i].style.color = "red";
+      }
+     }
+
+      // getElementsByTagName()
+      function changeColor() {
+      let paragraphs = document.getElementsByTagName("p");
+      for (let i = 0; i < paragraphs.length; i++) {
+      paragraphs[i].style.color = "blue";
+      }
+     }
+
+      // querySelector()
+     function updateHeading() {
+     let firstHeading = document.querySelector(".heading");
+     firstHeading.style.color = "green";
+     }
+
+      //querySelectorAll()
+     function colorBoxes() {
+     let boxes = document.querySelectorAll(".box");
+     boxes.forEach(box => {
+     box.style.backgroundColor = "yellow";
+      });
+     }
+  </script>
+</body>
+</html>

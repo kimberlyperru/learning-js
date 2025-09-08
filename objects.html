@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <body>
+    <h2>Object Properties</h2>
+    <script>
+        // Accessing items in an object
+        let person = {
+            name: "Bobo",
+            age: 25,
+            country: "Kenya"
+         };
+     
+         console.log(person.name);     
+         console.log(person["age"]);   
+
+
+     let student = {
+     name: "Dua",
+     Mouse: ["wireless", "wired", "optical"]
+     };
+
+     // Access the array itself
+     console.log(student.Mouse);  
+
+     // Access specific items in the array
+     console.log(student.Mouse[0]);     
+     console.log(student.Mouse[1]);     
+
+     // Loop through the array inside the object
+     student.Mouse.forEach(function(mouse) {
+     console.log(mouse);
+     });
+
+
+         
+
+    </script>
+ </body>
+</html>
