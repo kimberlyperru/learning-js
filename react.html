@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React</title>
+    <title>React| users</title>
 </head>
 <body>
+    <h1>Impact of API on users</h1>
+    <ul id="userList"></ul>
 
     
     <script>
@@ -18,27 +20,37 @@
         //     );
             
         // }
-          
-        let apiURL = http://jsonplaceholder.typicode.com/users;
+        let apiURL = "http://jsonplaceholder.typicode.com/users";
+
         fetch(apiURL)
         .then(response => response.json())
         .then(data => {
-         console.log(data); 
+         console.log(data);  // Logging the fetched data
 
-        //  Displaying data in the page
-        let list = document.getElementById("userList");
-        data.forEach(user => {
-            let li = document.createElement("li");
-            li.textContent = user.name +"{"user.email"}";
-            list.appendChild(li);
-        });
-    })
-    
-        .catch(error => console.log('Request Failed', error));
-
+     //     //  Displaying data in the page
+     //     let list = document.getElementById("userList");
+     //     data.forEach(user => {
+     //         let li = document.createElement("li");
+     //         li.textContent = user.name +" ("+user.email+")";
+     //         list.appendChild(li);
+     //     });
+     //    })
            
-       
+     // Displaying users 5–10
+     let list = document.getElementById("userList");
+    
+     let selectedUsers = data.slice(5, 10);
 
-    </script>
+     selectedUsers.forEach(user => {
+      let li = document.createElement("li");
+      li.textContent = user.name + " (" + user.email + ")";
+      list.appendChild(li);
+     });
+     })
+     .catch(error => console.error("Error fetching data", error));
+
+
+
+     </script>
 </body>
 </html>
